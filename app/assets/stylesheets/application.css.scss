@@ -10,6 +10,104 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
  */
+
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:600italic);
+@import "framework_and_overrides";
+
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+@import "pages";
+@import "articles";
+
+
+// Header
+
+.navbar-inverse {
+  background-color: #7CA4B3;
+  border-color: #83898B;
+
+  .container {
+    width: 1090px;
+    margin: 0px auto;
+    padding-left: 75px;
+  }
+}
+
+.logo {
+  position: relative;
+  width: 78px;
+  text-align: center;
+  top: 8px;
+  font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: rgb(247, 247, 247);
+  font-style: italic;
+  display: inline-block;
+}
+
+.search-form {
+  position: relative;
+  left: 65px;
+  top: 5px;
+  width: 785px;
+  height: 35px;
+  display: inline-block;
+
+  input.search {
+    box-sizing: border-box;
+    width: inherit;
+    height: inherit;
+    background: rgb(107, 144, 158);
+    border: none;
+    padding: 3px;
+    padding-left: 30px;
+    color: white;
+    border-radius: 2px;
+    outline: none;
+    border: 1px solid rgb(106, 140, 153);
+  }
+
+  i {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    z-index: 100;
+    color: white;
+  }
+}
+
+a.mark-all-as-read {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  border: 1px solid rgb(106, 140, 153);
+  margin-left: 10px;
+  position: relative;
+  vertical-align: middle;
+  left: 60px;
+  top: 4px;
+  border-radius: 2px;
+  background: rgb(161, 185, 194);
+  text-align: center;
+
+  &:hover {
+    i {
+      color: rgb(71, 79, 90);
+    }
+  }
+
+  i {
+    position: relative;
+    top: 7px;
+    color: white;
+    display: inline-block;
+
+  }
+}
+
+a.refresh {
+  @extend .mark-all-as-read;
+  margin-left: 15px;
+}

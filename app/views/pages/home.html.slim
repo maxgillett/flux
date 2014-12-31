@@ -1,0 +1,33 @@
+.container.home
+  .col-xs-2.fixed
+    .batch-status
+      = link_to_unless params[:status] != 'all', 'Unread', root_url, class: 'unread-articles' do
+        .unread-articles-clicked
+          | Unread
+      = link_to_unless params[:status] == 'all', 'All Articles', root_url(status: :all), class: 'all-articles' do
+        .all-articles-clicked
+          | All Articles
+          //span.badge 4
+    .section-divider
+    .time-period
+      .label TIME PERIOD
+      .options
+        div
+          = radio_button_tag "time_period", "7"
+          span 7 days
+        div
+          = radio_button_tag "time_period", "30"
+          span 30 days
+        div
+          = radio_button_tag "time_period", "NA", true
+          span All Time
+    .section-divider
+    .publications
+      .label JOURNALS
+      .options
+        - Journal.all.each do |j|
+          div
+            = check_box_tag "journal", j.id
+            span = j.name
+
+  .col-xs-10.scrollable.articles

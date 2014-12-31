@@ -1,0 +1,21 @@
+- @articles.each do |article|
+  = link_to article.url, target: 'blank' do
+    .article 
+      .title 
+        = raw(article.title)
+      .description 
+        = raw(sanitize(article.description, tags: [:p]))
+      .other-info
+        .primary
+          .publication_name[class="#{article.publication_name.downcase.tr(' ', '_')}"] = article.publication_name
+          .genre = article.genre
+          .publication_date = Date.parse(article.publication_date).strftime("%b %d, %Y")
+          .keywords = article.keywords
+        - if article.authors.present?
+          .authors 
+            = article.authors
+= will_paginate @articles
+
+- if @articles.empty?
+  .empty 
+    | No results found. Try another search term.

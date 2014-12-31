@@ -1,0 +1,81 @@
+@import "framework_and_overrides";
+
+.container.home {
+  width: 1090px;
+
+  .fixed {
+    position: fixed;
+    padding: 10px 0;
+    background: rgb(97, 126, 165);
+    width: 200px;
+    top: 50px;
+  }
+
+  .scrollable {
+    position: relative;
+    left: 200px;
+    padding: 0px;
+    top: -1px;
+  }
+}
+
+// Fixed left sidebar contents
+
+.batch-status {
+  padding-top: 5px;
+
+  a.unread-articles, a.all-articles {
+    display: block;
+    padding: 3px 25px;
+  }
+
+  .unread-articles-clicked, .all-articles-clicked {
+    padding: 3px 25px;
+    background: rgb(71, 79, 90);
+    font-size: 14px;
+    color: white;
+  }
+
+  a {
+    font-size: 14px;
+    color: white;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.time-period, .publications {
+  color: white;
+
+  .options {
+    padding: 5px 25px;
+
+    span {
+      padding-left: 8px;
+      width: 130px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  .label {
+    font-size: 11px;
+    padding-left: 15px;
+    color: #B5D0F2;
+  }
+}
+
+.section-divider {
+  height: 1px;
+  margin: 10px 10px;
+  background: rgb(83, 103, 131);
+}
+
+
+
+

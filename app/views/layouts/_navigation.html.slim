@@ -1,13 +1,11 @@
-/ navigation styled for Bootstrap 3.0
 nav.navbar.navbar-inverse.navbar-fixed-top
   .container
-    .navbar-header
-      button.navbar-toggle[type="button" data-toggle="collapse" data-target=".navbar-collapse"]
-        span.sr-only Toggle navigation
-        span.icon-bar
-        span.icon-bar
-        span.icon-bar
-      = link_to 'Home', root_path, class: 'navbar-brand'
-    .collapse.navbar-collapse
-      ul.nav.navbar-nav
-        == render 'layouts/navigation_links'
+    .logo 
+      | SciFeed
+    .search-form
+      input.search[placeholder='Search for title, keywords, authors, etc...']
+      = icon 'search'
+    = link_to refresh_articles_path, class: 'refresh' do
+      = icon 'retweet'
+    = link_to mark_as_read_articles_path, class: 'mark-all-as-read', method: :post do
+      = icon 'archive'
