@@ -12,7 +12,7 @@ class ArticlesController < ApplicationController
   end
 
   def mark_as_read
-    Article.all.each(&:mark_as_read)
+    Article.unread.each(&:mark_as_read)
     redirect_to root_path
   end
 

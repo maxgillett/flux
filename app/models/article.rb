@@ -2,6 +2,9 @@ class Article < ActiveRecord::Base
   validates :url, uniqueness: true
   belongs_to :journal
 
+  scope :read,   -> { where(read_status: true) }
+  scope :unread, -> { where(read_status: nil) }
+
   def mark_as_read
     update_attribute('read_status', true)
   end
