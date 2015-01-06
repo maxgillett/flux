@@ -9,7 +9,9 @@ Flux is a personal repository for recent scientific journal articles. Flux scrap
 Hosting
 ----------------
 
-Flux is a Rails application, and designed to be run without interruption. I recommend hosting on a dedicated machine in your LAN and setting up port forwarding.
+Flux is a Rails application, and designed to be run without interruption. I recommend hosting on a dedicated machine in your LAN and setting up port forwarding. 
+
+Before starting the server you will need to create a new database.yml file, and enter credentials for a Postgres database. See 'database_example.yml' for an example YAML file. After doing so, you should run 'db:schema:load', followed by 'rake db:seed'.
 
 
 Adding new journals
@@ -38,4 +40,3 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
