@@ -6,7 +6,7 @@ Flux is a personal repository for recent scientific journal articles. Flux scrap
 ![Flux Screenshot](/public/screenshot.png)
 
 
-Hosting
+####Hosting
 ----------------
 
 Flux is a Rails application, and designed to be run without interruption. I recommend hosting on a dedicated machine in your LAN and setting up port forwarding. 
@@ -14,13 +14,13 @@ Flux is a Rails application, and designed to be run without interruption. I reco
 Before starting the server you will need to create a new database.yml file, and enter credentials for a Postgres database. See 'database_example.yml' for an example YAML file. After doing so, you should run 'db:schema:load', followed by 'rake db:seed'.
 
 
-Adding new journals
+####Adding new journals
 ----------------
 
 Scrapers for each scientific journal reside in 'lib/scrapers/'. By convention, the filename of each scraper is the corresponding Journal object's whitespace-stripped and underscored name. To add a new journal, modify 'seeds.rb' to create a new Journal object, and create the appropriate scraper. See existing scrapers for examples.
 
 
-Legal Questions
+####Legal Questions
 ----------------
 
 Is web scraping illegal? This can be a difficult question to answer. In short, it depends on whether the gathered information is for personal or public consumption, and on the nature of the content itself. See this [Wikipedia entry](https://en.wikipedia.org/wiki/Web_scraping#Legal_issues) for an overview of recent court rulings.
@@ -30,7 +30,7 @@ Also of note, under U.S. copyright law websites do have the legal authority to d
 Notwithstanding the above, publishing code to scrape a website is legally permitted, which is the extent of what is hosted in this repository. It is your responsibility to use this tool in an appropriate manner. 
 
 
-License
+####License
 ----------------
 
 Copyright (c) 2015 Max Gillett
